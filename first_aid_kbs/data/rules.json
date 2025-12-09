@@ -1,0 +1,35 @@
+[
+    {
+        "if": ["bleeding", "cut"],
+        "then": "Apply pressure to stop bleeding. Clean wound and bandage."
+    },
+    {
+        "if": ["burn"],
+        "then": "Hold under cool running water for 15 minutes. Do NOT apply ice."
+    },
+    {
+        "if": ["choking"],
+        "then": "Perform 5 back blows followed by abdominal thrusts (Heimlich maneuver)."
+    },
+    {
+        "if": ["sprain", "ankle"],
+        "then": "Use RICE: Rest, Ice, Compression, Elevation."
+    },
+    {
+        "if": ["nosebleed"],
+        "then": "Lean forward and pinch the nose for 10 minutes."
+    },
+    {
+        "if": ["fracture", "bone"],
+        "then": "Immobilize the injured area and seek medical attention."
+    },
+    {
+        "if": ["fainting", "dizziness"],
+        "then": "Lay the person down and elevate legs. Ensure fresh air."
+    },
+    {
+        "if": ["headache", "migraine"],
+        "then": "Rest in a dark, quiet room. Drink water and take pain relief if safe."
+    }
+]
+

@@ -1,0 +1,50 @@
+
+<!-- app/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First-Aid Expert System</title>
+    <!-- Bootstrap CDN for professional styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="mb-4">First-Aid Expert System</h1>
+
+    <!-- Input Form -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <form method="POST" action="/diagnose">
+                <div class="mb-3">
+                    <label for="symptom" class="form-label">Describe your symptoms or situation:</label>
+                    <input type="text" class="form-control" id="symptom" name="symptom" placeholder="e.g., bleeding from finger, severe burn" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Get Recommendation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Display Recommendation -->
+    {% if result %}
+    <div class="card mb-4">
+        <div class="card-body">
+            <h4>Recommendation</h4>
+            <p>{{ result.recommendation }}</p>
+        </div>
+    </div>
+
+    <!-- Display Explanation -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <h4>Explanation</h4>
+            <pre>{{ result.explanation|join('\n') }}</pre>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
